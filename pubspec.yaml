@@ -1,0 +1,57 @@
+name: emprende
+description: "Pides aquí, impulsas allá"
+publish_to: 'none'
+
+# Versión de la app (se puede cambiarla cuando haga nuevas actualizaciones)
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Íconos estilo iOS
+  cupertino_icons: ^1.0.8
+
+  # Paquete para cambiar ícono de la app
+  flutter_launcher_icons: ^0.14.4
+
+  # Paquete para personalizar el splash inicial
+  flutter_native_splash: ^2.4.8
+
+  # Paquete para leer variables de entorno (.env)
+  flutter_dotenv: ^6.0.1
+
+  # 👇 Paquete para hacer peticiones HTTP (necesario en el paso 7)
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  # Esto permite usar los íconos de Material Design
+  uses-material-design: true
+
+  # Aquí declaramos las imágenes que vamos a usar en la app
+  assets:
+    - assets/logo_emprende.jpeg
+    - assets/favicon_emprende.jpeg
+
+# Configuración del splash inicial (pantalla de arranque)
+flutter_native_splash:
+  color: "#000000"                # color de fondo (negro elegante)
+  image: assets/logo_emprende.jpeg # logo para splash
+  android: true                   # habilitar en Android
+  ios: true                       # habilitar en iOS
+  android_gravity: center          # logo centrado en Android
+  ios_content_mode: scaleAspectFit # logo centrado en iOS
+
+# Configuración del ícono de la app (favicon)
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/favicon_emprende.jpeg"

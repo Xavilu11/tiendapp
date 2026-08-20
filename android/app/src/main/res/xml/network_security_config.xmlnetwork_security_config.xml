@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Cambia la IP por la de tu PC -->
+        <domain includeSubdomains="true">192.168.10.94</domain>
+    </domain-config>
+</network-security-config>
