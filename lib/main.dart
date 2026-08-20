@@ -135,7 +135,7 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
     // Animación curva para suavizar la entrada
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
