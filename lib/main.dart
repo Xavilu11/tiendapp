@@ -92,7 +92,8 @@ class _StatusScreenState extends State<StatusScreen> {
             return const Center(child: CircularProgressIndicator()); // Cargando
           } else if (snapshot.hasError) {
             return Center(child: Text("Error: ${snapshot.error}"));
-          } else if (snapshot.hasError || snapshot.data?.startsWith('Error:') == true) {
+          } else if (snapshot.hasError ||
+              snapshot.data?.startsWith('Error:') == true) {
             return Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -140,18 +141,24 @@ class _SplashScreenState extends State<SplashScreen>
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
     _rotation = TweenSequence<double>([
       TweenSequenceItem(
-        tween: Tween(begin: -0.08, end: 0.06)
-            .chain(CurveTween(curve: Curves.easeOut)),
+        tween: Tween(
+          begin: -0.08,
+          end: 0.06,
+        ).chain(CurveTween(curve: Curves.easeOut)),
         weight: 35,
       ),
       TweenSequenceItem(
-        tween: Tween(begin: 0.06, end: -0.025)
-            .chain(CurveTween(curve: Curves.easeInOut)),
+        tween: Tween(
+          begin: 0.06,
+          end: -0.025,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
         weight: 25,
       ),
       TweenSequenceItem(
-        tween: Tween(begin: -0.025, end: 0.0)
-            .chain(CurveTween(curve: Curves.easeOut)),
+        tween: Tween(
+          begin: -0.025,
+          end: 0.0,
+        ).chain(CurveTween(curve: Curves.easeOut)),
         weight: 40,
       ),
     ]).animate(_controller);
@@ -351,15 +358,14 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void login() {
-      if (emailController.text.isNotEmpty &&
-          passwordController.text.isNotEmpty) {
-        Navigator.pushReplacementNamed(context, '/home');
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Completa tus datos para entrar")),
-        );
-      }
+    if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+      Navigator.pushReplacementNamed(context, '/home');
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Completa tus datos para entrar")),
+      );
     }
+  }
 
   @override
   Widget build(BuildContext context) {
