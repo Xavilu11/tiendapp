@@ -18,13 +18,10 @@ dependencies:
   # Paquete para cambiar ícono de la app
   flutter_launcher_icons: ^0.14.4
 
-  # Paquete para personalizar el splash inicial
-  flutter_native_splash: ^2.4.8
-
   # Paquete para leer variables de entorno (.env)
   flutter_dotenv: ^6.0.1
 
-  # 👇 Paquete para hacer peticiones HTTP (necesario en el paso 7)
+  # Paquete para hacer peticiones HTTP (necesario en el paso 7)
   http: ^1.2.0
 
 dev_dependencies:
@@ -40,15 +37,7 @@ flutter:
   assets:
     - assets/logo_emprende.jpeg
     - assets/favicon_emprende.jpeg
-
-# Configuración del splash inicial (pantalla de arranque)
-flutter_native_splash:
-  color: "#000000"                # color de fondo (negro elegante)
-  image: assets/logo_emprende.jpeg # logo para splash
-  android: true                   # habilitar en Android
-  ios: true                       # habilitar en iOS
-  android_gravity: center          # logo centrado en Android
-  ios_content_mode: scaleAspectFit # logo centrado en iOS
+    - .env
 
 # Configuración del ícono de la app (favicon)
 flutter_icons:

@@ -1,6 +1,6 @@
 {
-    "name": "tiendapp",
-    "short_name": "tiendapp",
+    "name": "Emprende",
+    "short_name": "Emprende",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
